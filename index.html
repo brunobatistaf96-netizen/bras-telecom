@@ -14,7 +14,7 @@
         .tabs-wrapper { background: rgba(10,20,40,0.9); backdrop-filter: blur(10px); margin: 0 0 1rem; padding: 0.9rem 0.5rem; overflow-x: auto; overflow-y: hidden; -webkit-overflow-scrolling: touch; border: 1px solid rgba(255,165,0,0.25); border-radius: 16px; position: sticky; top: 0; z-index: 50; scrollbar-width: none; }
         .tabs-wrapper::-webkit-scrollbar { display: none; }
         .tabs-container { display: flex; gap: 0.7rem; padding: 0 0.8rem; width: max-content; }
-        .tab-btn { padding: 0.65rem 1.2rem; border: 2px solid rgba(255,165,0,0.3); background: transparent; border-radius: 30px; cursor: pointer; font-size: 0.85rem; font-weight: 700; color: var(--text); transition: all 0.3s ease; white-space: nowrap; }
+        .tab-btn { padding: 0.65rem 0; border: 2px solid rgba(255,165,0,0.3); background: transparent; border-radius: 30px; cursor: pointer; font-size: 0.82rem; font-weight: 700; color: var(--text); transition: all 0.3s ease; white-space: nowrap; flex: 0 0 calc(38vw); text-align: center; }
         .tab-btn.active { background: linear-gradient(135deg, var(--secondary), #ff8c00); color: #001a33; border-color: var(--secondary); box-shadow: 0 5px 15px rgba(255,165,0,0.35); }
         .section-title { text-align: center; margin: 1rem 0 0; }
         .section-title h2 { font-size: 1.4rem; font-weight: 900; color: var(--text); }
@@ -110,7 +110,7 @@
     </div>
     <footer>
         <p id="footerCopyright">2025 Bras Telecom . Todos os direitos reservados</p>
-        <p style="margin-top:0.4rem"><a href="tel:+556241416003" id="footerPhone">(62) 4141-6003</a></p>
+        
     </footer>
     <div class="modal" id="appModal">
         <div class="modal-content">
@@ -250,7 +250,7 @@ var appsData = [
                 "<div class=\"price-section\"><div class=\"price-label\">por apenas</div>"+
                 "<div class=\"price-value\"><span class=\"currency\">R$</span>"+p.int+"<span class=\"cents\">,"+p.cents+"</span></div>"+
                 "<div class=\"price-note\">*com desconto de pontualidade</div></div>"+
-                "<div class=\"card-footer\"><button class=\""+btn+"\">Contrate agora!</button></div>";
+                "<div class=\"card-footer\"><button class=\""+btn+"\" onclick=\"window.open('https://wa.me/551197228173','_blank')\">Contrate agora!</button></div>";
             c.appendChild(card);
         });
     }
